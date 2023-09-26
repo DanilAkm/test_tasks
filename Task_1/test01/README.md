@@ -1,6 +1,6 @@
 # Test 01
 
-Create a bash script that sets up the following system properties on Ubuntu 18.04 server:
+Create a bash script that sets up the following system properties on Ubuntu 22.04 server:
 
 * Time zone
 * Locale
