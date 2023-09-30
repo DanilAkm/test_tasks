@@ -1,4 +1,4 @@
-# Run the file as root if you want it work ovviamente :)
+# Run the file as root if you want it to work ovviamente :)
 # I
 
 CUR_ZONE=$(cat /etc/timezone)
@@ -39,6 +39,17 @@ echo 'Warning: ssh port changed to 2498'
 sudo sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin no/' /etc/ssh/sshd_config
 
 service ssh restart
+
+# V & VI
+
+useradd serviceuser
+usermod -aG sudo serviceuser
+
+# VII
+
+echo 'serviceuser ALL=(ALL) /usr/sbin/service * start, /usr/sbin/service * stop, /usr/sbin/service * restart' >> /etc/sudoers
+
+
 
 
 
